@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoUIScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="w6n-e9-zIT">
+                                <rect key="frame" x="10" y="30" width="355" height="627"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1400px-Hong_Kong_at_night-1" translatesAutoresizingMaskIntoConstraints="NO" id="odb-8b-b6I">
+                                        <rect key="frame" x="0.0" y="0.0" width="2965.5" height="627"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="odb-8b-b6I" secondAttribute="height" multiplier="1400:296" id="a1k-5i-Mgj"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.65634243873982401" green="0.74535998760272981" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="odb-8b-b6I" secondAttribute="bottom" id="5hC-le-Jyf"/>
+                                    <constraint firstItem="odb-8b-b6I" firstAttribute="height" secondItem="w6n-e9-zIT" secondAttribute="height" id="D4h-a2-Yh9"/>
+                                    <constraint firstItem="odb-8b-b6I" firstAttribute="top" secondItem="w6n-e9-zIT" secondAttribute="top" id="FIg-tg-Ya5"/>
+                                    <constraint firstItem="odb-8b-b6I" firstAttribute="leading" secondItem="w6n-e9-zIT" secondAttribute="leading" id="dtq-il-Mba"/>
+                                    <constraint firstAttribute="trailing" secondItem="odb-8b-b6I" secondAttribute="trailing" id="kyX-i2-kCT"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Yow-oa-Lhm"/>
+                                    <outletCollection property="gestureRecognizers" destination="aLk-hx-QUV" appends="YES" id="YqP-s7-ijx"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94145829959064897" green="1" blue="0.1139784731988307" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w6n-e9-zIT" secondAttribute="trailing" constant="10" id="5Y1-LN-qoW"/>
+                            <constraint firstItem="w6n-e9-zIT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Mdn-oz-bjj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w6n-e9-zIT" secondAttribute="bottom" constant="10" id="Qla-hQ-kJI"/>
+                            <constraint firstItem="w6n-e9-zIT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="RFZ-TE-TPU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="w6n-e9-zIT" id="m1d-wN-Zch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer delaysTouchesBegan="YES" numberOfTapsRequired="2" id="aLk-hx-QUV">
+                    <connections>
+                        <action selector="didRecognizeDoubleTap:" destination="BYZ-38-t0r" id="yRL-Fb-jgv"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1400px-Hong_Kong_at_night-1" width="336" height="71"/>
+    </resources>
+</document>

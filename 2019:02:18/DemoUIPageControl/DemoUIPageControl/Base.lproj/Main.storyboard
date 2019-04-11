@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoUIPageControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m0" translatesAutoresizingMaskIntoConstraints="NO" id="QhH-rQ-UIx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="kVG-PA-08X">
+                                <rect key="frame" x="0.0" y="630" width="375" height="37"/>
+                                <color key="currentPageIndicatorTintColor" red="0.11955706281568956" green="1" blue="0.093505509615494864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onPageControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="v9y-Jm-NZA"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kVG-PA-08X" secondAttribute="trailing" id="2kH-CX-eue"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kVG-PA-08X" secondAttribute="bottom" id="BNV-rb-2Zl"/>
+                            <constraint firstItem="QhH-rQ-UIx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="SrD-Rz-XHA"/>
+                            <constraint firstItem="kVG-PA-08X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nnv-yf-45f"/>
+                            <constraint firstItem="QhH-rQ-UIx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sdL-kk-Orb"/>
+                            <constraint firstItem="QhH-rQ-UIx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vIa-QF-azO"/>
+                            <constraint firstItem="QhH-rQ-UIx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="xFe-DN-HRR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="QhH-rQ-UIx" id="6wt-J1-u6z"/>
+                        <outlet property="pageControl" destination="kVG-PA-08X" id="7s1-RX-4YB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="m0" width="320" height="568"/>
+    </resources>
+</document>
